@@ -9,6 +9,7 @@ resource "aws_vpc" "vpc" {
 resource "aws_subnet" "subnet" {
   vpc_id     = aws_vpc.vpc.id
   cidr_block = "10.0.0.0/25"
+  avaibility_zone = "ap-south-1"
 
   tags = {
     Name = "subnet"
@@ -17,6 +18,7 @@ resource "aws_subnet" "subnet" {
 resource "aws_subnet" "subnet2" {
   vpc_id     = aws_vpc.vpc.id
   cidr_block = "10.0.0.128/25"
+  avaibility_zone = "ap-south-1"
 
   tags = {
     Name = "subnet"
